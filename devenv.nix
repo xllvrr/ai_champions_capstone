@@ -6,6 +6,10 @@
   ...
 }: let
   buildInputs = with pkgs; [
+    glib
+    libGL
+    libGLU
+    mesa
     stdenv.cc.cc
     libuv
     zlib
@@ -21,6 +25,8 @@ in {
       sync.enable = true;
     };
   };
+
+  dotenv.enable = true;
 
   scripts.hello.exec = "uv run python hello.py";
 
