@@ -4,41 +4,23 @@ version = "0.1.0"
 description = "AI Learning Course under NCSS"
 requires-python = ">=3.10, <4.0"
 dependencies = [
-    # Get Jupyter
-    "jupyter",
-    "jupyterlab-vim",
-    "ipython",
-    "nbqa[toolchain]",
-    # Install packages for data analysis
-    "numpy",
-    "pandas",
-    "matplotlib",
-    "seaborn",
-    "chromadb",
-    "datasets",
     # Install packages for AI
-    "graphviz",
-    "tiktoken",
     "openai",
-    "lolviz>=1.4.4",
     "langchain",
     "langchain-openai",
-    "langchain-experimental",
-    "langchain-chroma",
-    "langchain_cohere",
-    "rank_bm25",
-    "tqdm",
-    "unstructured",
-    "pysbd",
-    "ragas",
+    "llama-index>=0.12.52",
+    "pi-heif>=1.0.0",
     "crewai[tools]>=0.1.32",
     # Install packages for file processing
-    "pypdf",
+    "unstructured",
+    "pdf2image>=1.17.0",
     "pdfminer",
     "pdfminer.six",
     # Install other utilities
-    "bs4",
-    "streamlit>=1.46.1",
     "ipykernel>=6.29.5",
     "dotenv>=0.9.9",
+    # Install streamlit
+    "streamlit>=1.46.1",
+    "pipreqs>=0.5.0",
+    "tomlq>=0.1.0",
 ]

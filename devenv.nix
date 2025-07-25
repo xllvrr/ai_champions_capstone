@@ -9,11 +9,10 @@
     glib
     libGL
     libGLU
+    libuv
     mesa
     stdenv.cc.cc
-    libuv
     zlib
-    graphviz
   ];
 in {
   env = {LD_LIBRARY_PATH = "${with pkgs; lib.makeLibraryPath buildInputs}";};
