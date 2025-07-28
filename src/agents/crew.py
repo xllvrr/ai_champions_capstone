@@ -1,9 +1,9 @@
 from crewai import Agent, Task, Crew
-from langchain_openai import ChatOpenAI
+from langchain.chat_models import init_chat_model
 
 
 def create_crew_agent_system():
-    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+    llm = init_chat_model(model="gpt-4o-mini", temperature=0)
 
     agent_researcher = Agent(
         role="Researcher",
