@@ -15,7 +15,7 @@ def create_crew_agent_system():
     )
 
     task_research = Task(
-        description="Given the document content, extract key insights and summarize it.",
+        description="Using the provided document context, answer the user's question accurately and concisely.",
         agent=agent_researcher,
         expected_output="A comprehensive but concise set of bullet points.",
     )

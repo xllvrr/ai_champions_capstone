@@ -1,8 +1,13 @@
-from unstructured.partition.pdf import partition_pdf
-from typing import List
+from pymupdf import open as open_pdf
 from pathlib import Path
 
 
-def extract_text_chunks(file_path: Path) -> List[str]:
-    elements = partition_pdf(filename=str(file_path))
-    return [el.text for el in elements if el.text and el.text.strip()]
+def extract_text_chunks(file_path: Path) -> list[str]:
+    doc = open_pdf(file_path)
+    chunks: list[str] = [
+        page.get_textpage().extractText()
+        for page in doc
+        if page.get_textpage().extractText().strip()
+    ]
+    doc.close()
+    return chunks

@@ -4,23 +4,21 @@ version = "0.1.0"
 description = "AI Learning Course under NCSS"
 requires-python = ">=3.10, <4.0"
 dependencies = [
-    # Install packages for AI
     "openai",
-    "langchain",
-    "langchain-openai",
+    "langchain-core>=0.3.69",
+    "langchain-community>=0.3.27",
+    "langchain-openai>=0.2.14",
     "llama-index>=0.12.52",
     "pi-heif>=1.0.0",
     "crewai[tools]>=0.1.32",
-    # Install packages for file processing
-    "unstructured",
+    "unstructured-inference>=1.0.5",
+    "pymupdf>=1.26.3",
     "pdf2image>=1.17.0",
     "pdfminer",
-    "pdfminer.six",
-    # Install other utilities
     "ipykernel>=6.29.5",
     "dotenv>=0.9.9",
-    # Install streamlit
-    "streamlit>=1.46.1",
     "pipreqs>=0.5.0",
     "tomlq>=0.1.0",
+    "streamlit>=1.46.1",
+    "faiss-cpu>=1.11.0.post1",
 ]

@@ -1,10 +1,9 @@
-from langchain.vectorstores import FAISS
-from langchain.embeddings.base import Embeddings
-from langchain.docstore.document import Document
-from typing import List
+from langchain_community.vectorstores import FAISS
+from langchain_core.embeddings import Embeddings
+from langchain_core.documents import Document
 
 
-def build_vector_store(docs: List[Document], embedder: Embeddings) -> FAISS:
+def build_vector_store(docs: list[Document], embedder: Embeddings) -> FAISS:
     return FAISS.from_documents(docs, embedder)
 
 
