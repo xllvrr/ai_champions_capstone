@@ -23,6 +23,7 @@ in {
       enable = true;
       sync.enable = true;
     };
+    package = pkgs.python311;
   };
 
   dotenv.enable = true;
