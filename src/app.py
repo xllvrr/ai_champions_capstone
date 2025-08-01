@@ -10,6 +10,12 @@ from retriever.vector_store import build_vector_store
 from graph.conversation import create_rag_graph
 from agents.crew import create_crew_agent_system
 
+# Streamlit ChromaDB fix
+__import__("pysqlite3")
+import sys
+
+sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
+
 load_dotenv()
 
 # === 1. ENVIRONMENT SETUP & PASSWORD PROTECTION ===
